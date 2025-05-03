@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Brandon Perryman">
+  <meta name="description" content="Altraum Resort - Contact page for inquiries and reservations.">
+  <title>Altram Resort | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Playwrite+DE+Grund:wght@100..400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>Altraum Resort</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="accommodations.html">Accommodations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero-image">
+        <img src="images/swiss-sunset.jpg" alt="A breathtaking view of a sunset over the Swiss mountains"
+          class="hero-img">
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-us">
+      <h2>Contact Us</h2>
+      <p>Please reach out to us with any questions or concerns. We are happy to help you plan your dream vacation with
+        us!<br>Required fields marked with a *</p>
+    </section>
+
+    <section class="contact-form">
+      <img src="images/swiss-peak.jpg" alt="A stunning view of a Swiss mountain peak" class="contact-img">
+      <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+        <div class="form-sections">
+          <div class="form-left">
+            <div class="form-group">
+              <label for="name">Full Name: *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address: *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number: *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+          <div class="form-right">
+            <div class="radio-group">
+              <h3>Preferred Contact Method: *</h3>
+              <div class="radio-options">
+                  <div>
+                  <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                  <label for="contact-email">Email</label>
+                  </div>
+                  <div>
+                  <input type="radio" id="contact-phone" name="contact-method" value="phone" required>
+                  <label for="contact-phone">Phone</label>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="comments">Comments: *</label>
+              <textarea id="comments" name="comments" rows="5" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Altraum Resort. All rights reserved.<br>
+      This site is for educational purposes only.</p>
+  </footer>
+</body>
+
+</html>
