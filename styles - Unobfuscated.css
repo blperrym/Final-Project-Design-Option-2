@@ -1,0 +1,403 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Variables */
+:root {
+  --primary-color: #C8102E;
+  --secondary-color: #A6D5DB;
+  --background-color:  #EFE8DA;
+  --text-color: #2E2E2E;
+  --title-font: 'Amarante', Arial, sans-serif;
+  --body-font: 'Playwrite DE Grund', Arial, sans-serif;
+  --title-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  --button-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  --hover-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  --image-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+body {
+  background-color: var(--background-color);
+  font-family: var(--body-font);
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 1280px;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* Custom styles for the project */
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+header h1 {
+  font-family: var(--title-font);
+  font-size: 2.5rem; 
+  color: var(--primary-color);
+  margin: 0;
+  text-shadow: var(--title-shadow);
+}
+
+nav {
+  display: flex; 
+  gap: 20px; 
+  align-items: center; 
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px; 
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.2rem; 
+  transition: color 0.3s ease;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--button-shadow);
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+  transition: background-color 0.5s ease;
+  box-shadow: var(--hover-shadow);
+  font-weight: bold;
+}
+
+nav a:active {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: var(--title-shadow)
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--body-font);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  box-shadow: var(--image-shadow);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--header-color);
+  text-shadow: var(--title-shadow);
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: var(--header-color);
+  line-height: 1.8;
+}
+
+main {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+.features {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.feature {
+  width: 100%;
+  display: flex;
+  gap: 20px;  
+}
+
+.feature img {
+  display: flex;
+  height: auto;
+  box-shadow: var(--image-shadow);
+}
+
+.feature-text h3 {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+footer {
+  background-color: var(--header-color);
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
+
+}
+
+footer p {
+  font-size: 1rem;
+  color: var(--text-color); 
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px; 
+}
+
+.form-group label {
+  margin: 10px 10px;
+  font-size: 1rem; 
+  color: var(--text-color); 
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px; 
+  border: 1px solid var(--text-color); 
+  border-radius: 5px; 
+  font-size: 1rem; 
+  color: var(--text-color); 
+}
+
+.contact-form {
+  max-width: 800px; 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  box-shadow: var(--image-shadow);
+  border-radius: 0.5rem;
+}
+
+
+.form-sections {
+  display: flex;
+  gap: 20px; 
+}
+
+
+.form-left,
+.form-right {
+  flex: 1; 
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%; 
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 0.25rem;
+  box-shadow: var(--button-shadow);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.contact-form input:invalid {
+  border-color: red;
+}
+.contact-form input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+  box-shadow: none;
+  
+}
+
+.contact-form .form-group div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.contact-form .form-group:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-form button {
+  width: 100%; 
+  padding: 10px 20px; 
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  justify-self: center;
+  box-shadow: var(--button-shadow);
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--hover-shadow);
+}
+
+
+.contact-us h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-shadow: var(--title-shadow);
+}
+
+
+.contact-us p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+
+.contact-form img {
+  width: 95%;
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 0 auto 10px auto;
+  box-shadow: var(--image-shadow);
+
+}
+
+
+.radio-group {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--background-color);
+  border: 1px solid var(--text-color);
+  border-radius: 1rem;  
+}
+
+.radio-group h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.radio-options {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
+  align-items: center; 
+  justify-content: space-around; 
+}
+
+.radio-options label {
+  display: inline; 
+  font-size: 1rem;
+  color: var(--text-color);
+  padding-top: 5px;
+}
+
+.radio-options > section {
+  display: flex;
+  align-items: center;
+
+}
